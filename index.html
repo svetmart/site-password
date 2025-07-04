@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accès protégé</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f0fe;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3366cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Entrer le mot de passe</h1>
+  <input type="password" id="password" placeholder="Mot de passe">
+  <button onclick="checkPassword()">Valider</button>
+  <div id="message"></div>
+
+  <script>
+    const correctPassword = "sti2d2025";
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const message = document.getElementById("message");
+      if (input === correctPassword) {
+        message.textContent = "✅ Accès autorisé.";
+        message.style.color = "green";
+      } else {
+        message.textContent = "❌ Mot de passe incorrect.";
+        message.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
