@@ -36,7 +36,7 @@
   <div id="message"></div>
 
   <script>
-    const correctPassword = "sti2d2025";
+    const correctPassword = "1234";
 
     function checkPassword() {
       const input = document.getElementById("password").value;
@@ -44,6 +44,7 @@
       if (input === correctPassword) {
         message.textContent = "✅ Accès autorisé.";
         message.style.color = "green";
+        window.location.href="https://svetmart3.wixsite.com/chemille-sti2d/groupe-1"
       } else {
         message.textContent = "❌ Mot de passe incorrect.";
         message.style.color = "red";
